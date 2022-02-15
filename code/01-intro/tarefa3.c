@@ -1,7 +1,5 @@
-int process_pixel(int level) {
-    int new_level;
+int process_pixel(int level, int limiar) {
+    if (level < limiar) return 0;
 
-    new_level = level;
-
-    return new_level;
+    return 255;
 }

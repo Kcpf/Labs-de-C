@@ -6,10 +6,11 @@
 #include <stdio.h>
 
 // TODO: declare função modulo aqui. Veja abaixo como ela será usada
+int modulo(int number) {
+    if (number < 0) return -number;
 
-
-
-
+    return number;
+}
 
 // não mexer...
 int main() {
