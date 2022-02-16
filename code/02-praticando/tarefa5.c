@@ -12,8 +12,17 @@ int modulo(int number) {
     return number;
 }
 
-int manhattan(int x1, int x2, int y1, int y2) {
-    return modulo(x1 - y1) + modulo(x2 - y2);
+// int manhattan(int x1, int x2, int y1, int y2) {
+//     return modulo(x1 - y1) + modulo(x2 - y2);
+// }
+
+struct Ponto {
+    int x;
+    int y;
+};
+
+int manhattan(struct Ponto p1, struct Ponto p2) {
+    return modulo(p1.x - p1.y) + modulo(p2.x - p2.y);
 }
 
 // não mexer
@@ -22,13 +31,22 @@ int main() {
     // assertEquals é uma função do mutirão que confere
     // se o segundo argumento é igual ao terceiro.
     // Neste caso, se ele checa a chamada de manhattan retorna o valor esperado. 
-    assertEquals("manhattan(0, 1, 2, 3) != 4", manhattan(0, 1, 2, 3), 4);
-    assertEquals("manhattan(0, 1, 0, 2) != 1", manhattan(0, 1, 0, 2), 1);
-    assertEquals("manhattan(1, 0, 2, 0) != 1", manhattan(1, 0, 2, 0), 1);
-    assertEquals("manhattan(1, 2, 1, 2) != 0", manhattan(1, 2, 1, 2), 0);
+    // assertEquals("manhattan(0, 1, 2, 3) != 4", manhattan(0, 1, 2, 3), 4);
+    // assertEquals("manhattan(0, 1, 0, 2) != 1", manhattan(0, 1, 0, 2), 1);
+    // assertEquals("manhattan(1, 0, 2, 0) != 1", manhattan(1, 0, 2, 0), 1);
+    // assertEquals("manhattan(1, 2, 1, 2) != 0", manhattan(1, 2, 1, 2), 0);
     
-    assertEquals("manhattan(0, -1, 0, 2) != 3", manhattan(0, -1, 0, 2), 3);
-    assertEquals("manhattan(-1, 0, 2, 0) != 3", manhattan(-1, 0, 2, 0), 3);
+    // assertEquals("manhattan(0, -1, 0, 2) != 3", manhattan(0, -1, 0, 2), 3);
+    // assertEquals("manhattan(-1, 0, 2, 0) != 3", manhattan(-1, 0, 2, 0), 3);
+
+    struct Ponto p1 = { 0, 2 };
+    struct Ponto p2 = { 1, 3 };
+    struct Ponto p3 = { 0, 0 };
+    struct Ponto p4 = { 1, 2 };
+
+
+    assertEquals("manhattan(0, 1, 2, 3) != 4", manhattan(p1, p2), 4);
+    assertEquals("manhattan(0, 1, 0, 2) != 1", manhattan(p3, p4), 1);
     
     printSummary
 

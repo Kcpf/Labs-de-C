@@ -1,0 +1,7 @@
+Número 2 não pode ser 0 
+É múltiplo 
+É múltiplo 
+É múltiplo 
+Não é múltiplo 
+É múltiplo 
+Número 2 não pode ser 0 

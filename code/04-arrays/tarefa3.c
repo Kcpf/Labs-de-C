@@ -7,6 +7,20 @@
 #include <stdio.h>
 
 /* TODO: implemente sua função conta_a aqui */
+int conta_a(char string[100]) {
+    int count = 0;
+    int i = 0;
+
+    while (string[i] != '\0') {
+        if (string[i] == 'a') {
+            count += 1;
+        }
+
+        i += 1;
+    }
+    return count;
+    
+}
 
 
 int main() {
